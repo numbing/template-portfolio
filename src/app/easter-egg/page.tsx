@@ -60,7 +60,7 @@ export default function SnakeGame() {
   useEffect(() => {
     if (!playing) return
     const handle = (e: KeyboardEvent) => {
-      let nd = moveRef.current
+      const nd = moveRef.current
       if (e.key === 'ArrowUp' && nd.y !== 1) setDir({ x: 0, y: -1 })
       if (e.key === 'ArrowDown' && nd.y !== -1) setDir({ x: 0, y: 1 })
       if (e.key === 'ArrowLeft' && nd.x !== 1) setDir({ x: -1, y: 0 })
